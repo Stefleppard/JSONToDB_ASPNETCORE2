@@ -1,0 +1,25 @@
+﻿@model IEnumerable<JSONToDB_ASPNETCORE2.Models.PriceInfo>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<table class="table">
+    <tr>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Volume</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Value)
+            </td>
+        </tr>
+    }
+</table>
